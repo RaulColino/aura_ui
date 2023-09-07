@@ -1,6 +1,6 @@
 name: aura_ui
 description:  Flutter Design System focused on aesthetics and simplicity.
-version: 0.0.1
+version: 0.1.0
 homepage: "https://pub.dev/packages/aura_ui"
 
 environment:
