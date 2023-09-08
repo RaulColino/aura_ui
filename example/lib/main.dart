@@ -73,7 +73,7 @@ class MyApp extends StatelessWidget {
 //         theme: ThemeData(
 //           primarySwatch: Colors.blue,
 //         ),
-//         home: const FirstPage(),
+//         home: const Home(),
 //       );
 //     } catch (e) {
 //       print(e);
@@ -92,7 +92,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       backgroundColor: AColor.background,
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const ThemeSettings(),
           AText.displayXL("Display XL").styles(
@@ -120,7 +120,6 @@ class ThemeSettings extends StatelessWidget {
           color: AColor.textPrimary,
         ),
         Row(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
               child: AText.bodyM("Light Theme"),
