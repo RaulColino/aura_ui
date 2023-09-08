@@ -92,14 +92,14 @@ class Home extends StatelessWidget {
     return Scaffold(
       backgroundColor: AColor.background,
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const ThemeSettings(),
           AText.displayXL("Display XL").styles(
             color: AColor.secondary,
             fontWeight: AFontWeight.bold,
           ),
-          AText.displayXL("Display XL 2").styles(
+          AText.displayL("Display L").styles(
             color: AColor.error,
             fontFamily: AFontFamily.inter,
           ),
@@ -120,15 +120,16 @@ class ThemeSettings extends StatelessWidget {
           color: AColor.textPrimary,
         ),
         Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
-              child: AText("Light Theme"),
+              child: AText.bodyM("Light Theme"),
               onPressed: () {
                 AuraUI.setLightTheme();
               },
             ),
             ElevatedButton(
-              child: AText("Dark Theme"),
+              child: AText.bodyM("Dark Theme"),
               onPressed: () {
                 AuraUI.setDarkTheme();
               },

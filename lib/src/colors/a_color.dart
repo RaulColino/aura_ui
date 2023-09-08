@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'a_theme.dart';
 
 class AColor {
+  //Aura semantic colors
   static Color primary = const Color(0xFFF32191);
   static Color secondary = const Color(0xFFED2F88);
   static Color success = const Color(0xFFF95591);
@@ -16,6 +17,9 @@ class AColor {
   static Color textSecondary = const Color(0xFF9C5858);
   static Color divider = const Color(0xFFC7ACAC);
   static Color border = const Color(0xFFE2ABAB);
+
+  //Constructor
+  AColor._();
 
   static void setTheme(ATheme theme) {
     primary = theme.primary!;

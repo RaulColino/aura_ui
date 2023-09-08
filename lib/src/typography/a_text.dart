@@ -5,7 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'a_font_family.dart';
 import 'a_font_weight.dart';
 
-///Text widget
+///Aura Text widget
 class AText extends Text {
   //Exclusive attributes of the class
   final AFontWeight? fontWeight;
@@ -14,21 +14,28 @@ class AText extends Text {
 
   //AuraUI text types
   //Display XL
-  static AText displayXL(String data) => AText(data).styles(
+  static AText displayXL(String data) => AText._(data).styles(
         fontSize: 96,
         fontWeight: AFontWeight.bold,
         letterSpacing: -1.5,
       );
 
   //Display L
-  static AText displayL(String data) => AText(data).styles(
+  static AText displayL(String data) => AText._(data).styles(
         fontSize: 60,
         fontWeight: AFontWeight.bold,
         letterSpacing: -0.5,
       );
 
+  //Body M
+  static AText bodyM(String data) => AText._(data).styles(
+        fontSize: 16,
+        fontWeight: AFontWeight.regular,
+        letterSpacing: 0.5,
+      );
+
   //Constructor
-  AText(
+  AText._(
     String data, {
     Key? key,
     StrutStyle? strutStyle,
@@ -109,7 +116,7 @@ class AText extends Text {
         );
 
   //CopyWith
-  AText copyWith({
+  AText _copyWith({
     String? data,
     Key? key,
     StrutStyle? strutStyle,
@@ -148,7 +155,7 @@ class AText extends Text {
     List<String>? fontFamilyFallback,
     String? package,
   }) {
-    return AText(
+    return AText._(
       data ?? this.data ?? "",
       key: key ?? this.key,
       strutStyle: strutStyle ?? this.strutStyle,
@@ -227,7 +234,7 @@ class AText extends Text {
     List<String>? fontFamilyFallback,
     String? package,
   }) =>
-      copyWith(
+      _copyWith(
         key: key,
         strutStyle: strutStyle,
         textAlign: textAlign,
